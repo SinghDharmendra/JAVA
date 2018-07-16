@@ -1,4 +1,4 @@
-package concept.java.basic;
+package concept.java.basic.passingparam;
 
 /**
  * 
