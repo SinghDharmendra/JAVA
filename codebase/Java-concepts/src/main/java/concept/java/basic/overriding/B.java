@@ -15,10 +15,10 @@ public class B extends A {
 	 * 
 	 */
 
-	void m3() {
+	/*void m3() {
 		System.out.println("A.m3");
 	}
-
+*/
 	public A m4() {
 		return new A();
 	}
@@ -32,8 +32,8 @@ public class B extends A {
 	 * The return type is incompatible with A.m6() Return type of overridden method
 	 * can be A higher level Class's object in hierarchy
 	 */
-	public A m6() {
+	/*public A m6() {
 		return new A();
-	}
+	}*/
 
 }
