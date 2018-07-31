@@ -5,6 +5,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * This problem is about forming largest number from the values i.e. passed as
+ * List of String
+ * 
+ * @author Dharmendra Singh
+ *
+ */
+
 public class FindingLargestNumberFromArray {
 
 	public static void main(String[] args) {

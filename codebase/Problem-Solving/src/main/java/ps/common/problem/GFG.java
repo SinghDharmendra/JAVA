@@ -4,6 +4,7 @@ package ps.common.problem;
 /**
  * 
  * number of subarrays with m odd numbers
+ *@author Dharendra Singh
  *
  */
 
