@@ -18,6 +18,7 @@ class SubArraySum
         // Pick a starting point
         for (i = 1; i <= n; i++) 
         {
+        	System.out.println("Entry=>i:"+i+"curr_sum:"+curr_sum);
             // If curr_sum exceeds the sum, then remove the starting elements
             while (curr_sum > sum && start < i-1)
             {
@@ -37,6 +38,7 @@ class SubArraySum
             // Add this element to curr_sum
             if (i < n)
             curr_sum = curr_sum + arr[i];
+        	System.out.println("Exit=>i:"+i+"curr_sum:"+curr_sum);
              
         }
  
