@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class test {
+public class WordLadder2 {
 	public static void main(String[] args) {
 		List<String> lst = new LinkedList<>();
 		lst.add("<!Entity a1 100;600;500>");
@@ -50,11 +50,12 @@ public class test {
 		 }
 
 		Set<Entry<String, List<String>>> entrySet = map.entrySet();
+		Set<String> keySet = map.keySet();
 
-		for (Entry<String, List<String>> e : entrySet) {
+		for (String x:keySet) {
 			int c = 0;
-			String k = e.getKey();
-			List<String> list = e.getValue();
+			String k =x;
+			List<String> list = map.get(k);
 			for (String b : list) {
 				if (map.containsKey(b))
 					c += map.get(b).size();
