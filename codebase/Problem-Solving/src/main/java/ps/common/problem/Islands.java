@@ -1,6 +1,12 @@
 package ps.common.problem;
 
-
+class Max{
+	int data;
+	public Max(int m) {
+		// TODO Auto-generated constructor stub
+		this.data=m;
+	}
+}
 
 class Islands
 {
@@ -21,8 +27,9 @@ class Islands
 
  // A utility function to do DFS for a 2D boolean matrix.
  // It only considers the 8 neighbors as adjacent vertices
- void DFS(int M[][], int row, int col, boolean visited[][])
+ void DFS(int M[][], int row, int col, boolean visited[][],Max el)
  {
+	
      // These arrays are used to get row and column numbers
      // of 8 neighbors of a given cell
      int rowNbr[] = new int[] {-1, -1, -1,  0, 0,  1, 1, 1};
@@ -33,8 +40,10 @@ class Islands
 
      // Recur for all connected neighbours
      for (int k = 0; k < 8; ++k)
-         if (isSafe(M, row + rowNbr[k], col + colNbr[k], visited) )
-             DFS(M, row + rowNbr[k], col + colNbr[k], visited);
+         if (isSafe(M, row + rowNbr[k], col + colNbr[k], visited) ) {
+        	 el.data++;
+             DFS(M, row + rowNbr[k], col + colNbr[k], visited,el);
+             }
  }
 
  // The main function that returns count of islands in a given
@@ -44,6 +53,9 @@ class Islands
      // Make a bool array to mark visited cells.
      // Initially all cells are unvisited
      boolean visited[][] = new boolean[ROW][COL];
+     
+     Max max=new Max(Integer.MIN_VALUE);
+     int gmax=Integer.MIN_VALUE;
 
 
      // Initialize count as 0 and travese through the all cells
@@ -55,9 +67,16 @@ class Islands
              {                                 // value 1 is not
                  // visited yet, then new island found, Visit all
                  // cells in this island and increment island count
-                 DFS(M, i, j, visited);
+            	max.data=1;
+                 DFS(M, i, j, visited,max);
+                 
+               gmax=max.data>gmax?max.data:gmax;
+                 
+                 
                  ++count;
              }
+     
+     System.out.println("gmax :"+gmax);
 
      return count;
  }

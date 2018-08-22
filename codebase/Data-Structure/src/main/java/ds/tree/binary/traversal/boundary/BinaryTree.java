@@ -20,10 +20,10 @@ public class BinaryTree {
 		if (node != null) {
 			if (node.right != null) {
 				System.out.print(node.data+" ");
-				printLeftBoundary(node.right);
+				printRightBoundary(node.right);
 			}else if(node.left != null) {
 				System.out.print(node.data+" ");
-				printLeftBoundary(node.left);
+				printRightBoundary(node.left);
 			}
 		}
 
