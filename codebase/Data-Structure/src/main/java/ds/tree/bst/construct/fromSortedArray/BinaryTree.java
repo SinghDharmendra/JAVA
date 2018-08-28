@@ -19,7 +19,7 @@ public class BinaryTree {
 		int n = arr.length;
 		tree.root = tree.sortedArrayToBST(arr, 0, n - 1);
 		System.out.println("Preorder traversal of constructed BST");
-		TreeTraversal.preOder(tree.root);
+		TreeTraversal.preOrder(tree.root);
 	}
 
 	private Node sortedArrayToBST(int[] arr, int low, int high) {

@@ -1,4 +1,4 @@
-package ds.common.list;
+package ds.list.common;
 
 public class Node {
 	public int data;

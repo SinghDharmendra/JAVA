@@ -4,20 +4,20 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class TreeTraversal {
-	public static void inorder(Node node) {
+	public static void inOrder(Node node) {
 		if (node == null)
 			return;
-		inorder(node.left);
+		inOrder(node.left);
 		System.out.printf(node.data + " ");
-		inorder(node.right);
+		inOrder(node.right);
 	}
 
-	public static void preOder(Node node) {
+	public static void preOrder(Node node) {
 		if (node == null)
 			return;
 		System.out.printf(node.data + " ");
-		preOder(node.left);
-		inorder(node.right);
+		preOrder(node.left);
+		preOrder(node.right);
 	}
 
 	public static void postOrder(Node node) {

@@ -30,13 +30,11 @@ public class BinaryTree {
 		Queue<Node> st = new LinkedList<>();
 		parentMap.put(root2, null);
 		st.add(root2);
-
 		while (!st.isEmpty()) {
 			Node current = st.remove();
 			if (current.left == null && current.right == null) {
 				printTopToBottom(current, parentMap);
 			}
-
 			if (current.left != null) {
 				st.add(current.left);
 				parentMap.put(current.left, current);
@@ -45,9 +43,7 @@ public class BinaryTree {
 				st.add(current.right);
 				parentMap.put(current.right, current);
 			}
-
 		}
-
 	}
 
 	private void printTopToBottom(Node current, Map<Node, Node> parentMap) {
@@ -61,5 +57,4 @@ public class BinaryTree {
 		}
 		System.out.println();
 	}
-
 }

@@ -1,6 +1,6 @@
 package ds.list.singly.traversal.nthFromEnd;
 
-import ds.common.list.Node;
+import ds.list.common.Node;
 
 /**
  * Java program to find n'th node from end<br>

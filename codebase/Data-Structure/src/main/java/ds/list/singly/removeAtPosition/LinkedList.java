@@ -1,7 +1,7 @@
 package ds.list.singly.removeAtPosition;
 
-import ds.common.list.ListTravsersal;
-import ds.common.list.Node;
+import ds.list.common.ListTravsersal;
+import ds.list.common.Node;
 
 //A complete working Java program to delete a node in a linked list
 //at a given position
