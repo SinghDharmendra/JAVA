@@ -57,6 +57,6 @@ class BinaryTree {
 		int size = pre.length;
 		Node root = tree.constructTree(pre, size);
 		System.out.println("Inorder traversal of the constructed tree is ");
-		TreeTraversal.inorder(root);
+		TreeTraversal.inOrder(root);
 	}
 }

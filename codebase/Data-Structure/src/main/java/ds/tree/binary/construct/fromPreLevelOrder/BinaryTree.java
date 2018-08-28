@@ -53,6 +53,6 @@ class BinaryTree {
 		int level[] = new int[] { 20, 8, 22, 4, 12, 10, 14 };	
 		Node node = tree.buildTree(in, level);
 		System.out.print("Inorder traversal of the constructed tree is \n");
-		TreeTraversal.inorder(node);
+		TreeTraversal.inOrder(node);
 	}
 }

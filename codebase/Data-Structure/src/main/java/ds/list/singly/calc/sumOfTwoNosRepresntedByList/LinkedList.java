@@ -1,7 +1,7 @@
 package ds.list.singly.calc.sumOfTwoNosRepresntedByList;
 //Java program to add two numbers represented by linked list
 
-import ds.common.list.Node;
+import ds.list.common.Node;
 
 class LinkedList {
 
