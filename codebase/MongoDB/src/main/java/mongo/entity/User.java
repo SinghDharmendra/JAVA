@@ -8,11 +8,11 @@ import com.google.gson.annotations.SerializedName;
 
 public class User {
 
-	@SerializedName("u_id") 
+	@SerializedName("u_id")
 	private String id;
-	@SerializedName("u_name") 
+	@SerializedName("u_name")
 	private String name;
-	@SerializedName("u_email") 
+	@SerializedName("u_email")
 	private String email;
 
 	public User(String name, String email) {

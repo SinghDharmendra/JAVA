@@ -26,7 +26,7 @@ class BinaryTree {
 		Queue<Node> Q = new LinkedList<>();
 		Q.add(node);
 
-		while (Q.isEmpty() == false) {
+		while (!Q.isEmpty()) {
 			node = Q.peek();
 			Q.remove();
 			S.push(node);
@@ -36,7 +36,7 @@ class BinaryTree {
 				Q.add(node.left);
 		}
 
-		while (S.empty() == false) {
+		while (!S.empty()) {
 			node = S.peek();
 			System.out.print(node.data + " ");
 			S.pop();
