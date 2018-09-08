@@ -7,7 +7,7 @@ public class BinaryTree {
 
 	private void printBoundary(Node node) {
 		if (node != null) {
-			System.out.print(node.data+" ");
+			System.out.print(node.data + " ");
 			printLeftBoundary(node.left);
 			printLeaf(node.left);
 			printLeaf(node.right);
@@ -16,39 +16,37 @@ public class BinaryTree {
 
 	}
 
-	private void printRightBoundary(Node node) {	
+	private void printRightBoundary(Node node) {
 		if (node != null) {
 			if (node.right != null) {
-				System.out.print(node.data+" ");
+				System.out.print(node.data + " ");
 				printRightBoundary(node.right);
-			}else if(node.left != null) {
-				System.out.print(node.data+" ");
+			} else if (node.left != null) {
+				System.out.print(node.data + " ");
 				printRightBoundary(node.left);
 			}
 		}
 
-	
-		
 	}
 
 	private void printLeaf(Node node) {
-	
-		if(node!=null) {
+
+		if (node != null) {
 			printLeaf(node.left);
-			if(node.left==null&&node.right==null)
-				System.out.print(node.data+" ");
+			if (node.left == null && node.right == null)
+				System.out.print(node.data + " ");
 			printLeaf(node.right);
 		}
-		
+
 	}
 
-	private void printLeftBoundary(Node node) {		
+	private void printLeftBoundary(Node node) {
 		if (node != null) {
 			if (node.left != null) {
-				System.out.print(node.data+" ");
+				System.out.print(node.data + " ");
 				printLeftBoundary(node.left);
-			}else if(node.right != null) {
-				System.out.print(node.data+" ");
+			} else if (node.right != null) {
+				System.out.print(node.data + " ");
 				printLeftBoundary(node.right);
 			}
 		}
