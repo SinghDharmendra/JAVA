@@ -31,7 +31,6 @@ public class Anagram {
 				map.put(ch, -1);
 			}
 		}
-
 		return map.values().stream().mapToInt(Math::abs).sum() == 0 ? true : false;
 
 	}
