@@ -42,11 +42,3 @@ class SubArrayWithMaxSum {
      maxSubArraySum(a, n);
  }
 }
-
-//This code is contributed by  prerna saini
-
-
-/*public class SubArrayWithMaxSum {
-
-}
-*/
