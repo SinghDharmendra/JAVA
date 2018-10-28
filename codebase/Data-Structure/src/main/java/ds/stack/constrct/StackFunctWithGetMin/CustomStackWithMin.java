@@ -44,7 +44,8 @@ class MyStack {
 
 	/**
 	 * Pop() : Removes an element from top of stack.<br>
-	 * Remove element from top. Let the removed element be y. Two cases arise:<br>
+	 * Remove element from top. Let the removed element be y.<br>
+	 * Two cases arise:<br>
 	 * If y is greater than or equal to minEle, the minimum element in the stack is
 	 * still minEle.<br>
 	 * If y is less than minEle, the minimum element now becomes (2*minEle – y),
@@ -103,7 +104,7 @@ class MyStack {
 	}
 };
 
-// Driver Code
+// Driver Code 
 public class CustomStackWithMin {
 	public static void main(String[] args) {
 		MyStack s = new MyStack();

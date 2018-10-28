@@ -1,15 +1,8 @@
 package ds.stack.application;
 
-import java.util.Scanner;
 import java.util.Stack;
 
-/**
- * Java program for checking balanced Parenthesis of expression
- * 
- * @author Dharmendra Singh
- *
- */
-public class BalancedParenthesis {
+public class BalanceParentheses {
 
 	static boolean isMatchingPair(char character1, char character2) {
 		if (character1 == '(' && character2 == ')')
@@ -22,20 +15,27 @@ public class BalancedParenthesis {
 			return false;
 	}
 
-	static boolean areParenthesisBalanced(String in) {
-		char exp[] = in.toCharArray();
-		Stack<Character> st = new Stack<Character>();
+	static boolean areParenthesisBalanced(char exp[]) {
+		Stack<Character> st = new Stack<>();
+
 		for (int i = 0; i < exp.length; i++) {
+
 			if (exp[i] == '{' || exp[i] == '(' || exp[i] == '[')
 				st.push(exp[i]);
+
 			if (exp[i] == '}' || exp[i] == ')' || exp[i] == ']') {
+
 				if (st.isEmpty()) {
 					return false;
-				} else if (!isMatchingPair(st.pop(), exp[i])) {
+				}
+
+				else if (!isMatchingPair(st.pop(), exp[i])) {
 					return false;
 				}
 			}
+
 		}
+
 		if (st.isEmpty())
 			return true;
 		else {
@@ -44,10 +44,8 @@ public class BalancedParenthesis {
 	}
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String input = sc.nextLine();
-		sc.close();
-		if (areParenthesisBalanced(input))
+		char exp[] = { '{', '(', ')', '}', '[', ']' };
+		if (areParenthesisBalanced(exp))
 			System.out.println("Balanced ");
 		else
 			System.out.println("Not Balanced ");
