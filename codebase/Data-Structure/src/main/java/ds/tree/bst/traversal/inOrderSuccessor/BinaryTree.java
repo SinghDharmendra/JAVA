@@ -201,4 +201,3 @@ class BinaryTree {
 	}
 }
 
-// This code has been contributed by Mayank Jaiswal

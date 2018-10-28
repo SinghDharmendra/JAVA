@@ -27,20 +27,20 @@ public class BinaryTree {
 		Map<Node, Node> parentMap = new HashMap<Node, Node>();
 		if (root2 == null)
 			return;
-		Queue<Node> st = new LinkedList<>();
+		Queue<Node> queue = new LinkedList<>();
 		parentMap.put(root2, null);
-		st.add(root2);
-		while (!st.isEmpty()) {
-			Node current = st.remove();
+		queue.add(root2);
+		while (!queue.isEmpty()) {
+			Node current = queue.remove();
 			if (current.left == null && current.right == null) {
 				printTopToBottom(current, parentMap);
 			}
 			if (current.left != null) {
-				st.add(current.left);
+				queue.add(current.left);
 				parentMap.put(current.left, current);
 			}
 			if (current.right != null) {
-				st.add(current.right);
+				queue.add(current.right);
 				parentMap.put(current.right, current);
 			}
 		}
