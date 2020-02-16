@@ -16,9 +16,19 @@ class BinaryTree {
 
 	void printLevelOrder() {
 		Queue<Node> queue = new LinkedList<Node>();
+		Node dummy=new Node(Integer.MIN_VALUE);
 		queue.add(root);
+		queue.add(dummy);
+
 		while (!queue.isEmpty()) {
 			Node tempNode = queue.poll();
+			if(tempNode==dummy){
+
+				System.out.println();
+				if(queue.size()>1)
+				queue.add(dummy);
+				continue;
+			}
 			System.out.print(tempNode.data + " ");
 
 			if (tempNode.left != null) {
